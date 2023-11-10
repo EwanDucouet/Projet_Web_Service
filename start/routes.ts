@@ -23,3 +23,8 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async () => {
   return { hello: 'world' }
 })
+Route.get('movies', 'MoviesController.index');
+Route.post('movies', 'MoviesController.store');
+Route.get('movies/:name', 'MoviesController.show');
+Route.patch('movies/:name', 'MoviesController.update');
+Route.delete('movies/:name', 'MoviesController.destroy');
