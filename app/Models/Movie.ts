@@ -1,5 +1,7 @@
 import { DateTime } from 'luxon';
-import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm';
+import { BaseModel, BelongsTo, column } from '@ioc:Adonis/Lucid/Orm';
+import { belongsTo } from "@adonisjs/lucid/build/src/Orm/Decorators";
+import Category from "App/Models/Category";
 
 export default class Movie extends BaseModel {
   @column({ isPrimary: true })
@@ -16,6 +18,9 @@ export default class Movie extends BaseModel {
 
   @column()
   public note: number;
+
+  @belongsTo(() => Category)
+  public categories: BelongsTo<typeof Category>;
 
   @column.dateTime({ autoCreate: true })
   public createdAt: DateTime;

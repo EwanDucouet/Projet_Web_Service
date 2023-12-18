@@ -1,4 +1,5 @@
-import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
+import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext';
+import Category from "App/Models/Category";
 import Movie from 'App/Models/Movie';
 
 export default class MoviesController {

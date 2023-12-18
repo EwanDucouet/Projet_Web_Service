@@ -28,3 +28,9 @@ Route.post('movies', 'MoviesController.store');
 Route.get('movies/:name', 'MoviesController.show');
 Route.patch('movies/:name', 'MoviesController.update');
 Route.delete('movies/:name', 'MoviesController.destroy');
+
+Route.get('categories', 'CategoryController.index');
+Route.post('categories', 'CategoryController.store');
+Route.get('categories/:name', 'CategoryController.show');
+Route.patch('categories/:name', 'CategoryController.update');
+Route.delete('categories/:name', 'CategoryController.destroy');
