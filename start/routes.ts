@@ -23,6 +23,15 @@ import Route from '@ioc:Adonis/Core/Route'
 Route.get('/', async () => {
   return { hello: 'world' }
 })
+
+// -----AUTH-----
+Route.post('api/account', ) // Create user
+Route.get('api/account/:uid', ) // Query user
+Route.put('api/account/:uid', ) // Update user
+Route.post('api/refresh-token/:refreshToken/token', ) // Create access token from refresh token
+Route.post('api/token', ) // Create access token
+Route.get('api/validate/:accessToken', ) // Validate token
+
 Route.get('movies', 'MoviesController.index');
 Route.post('movies', 'MoviesController.store');
 Route.get('movies/:name', 'MoviesController.show');
